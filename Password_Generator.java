@@ -14,9 +14,10 @@ public class Password_Generator {
         int lengthPassword = Integer.parseInt(read.nextLine());
         for (int i = 0; i < array.length; i++) {
             Password password = new Password(lengthPassword);
+            int index = i+ 1;
             array[i] = password;
             strong[i] = password.isStrong();
-            System.out.println("\nPassword\t" + (i + 1) + ":\t" + array[i].getPassword() + "\nIt is strong?-\t" + (i + 1) + ":\t" + strong[i]);
+            System.out.println("\nPassword\t" + index + ":\t" + array[i].getPassword() + "\nIt is strong?\t" + index + ":\t" + strong[i]);
         }
     }
 }
