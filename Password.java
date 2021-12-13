@@ -30,21 +30,25 @@ public class Password {
             for (char upper : ALPHA_UPPER_CHARACTERS) {
                 if (c == upper) {
                     uppercase++;
+                    break;
                 }
             }
             for (char lower : ALPHA_LOWER_CHARACTERS) {
                 if (c == lower) {
                     lowercase++;
+                    break;
                 }
             }
             for (char number : NUMERIC_CHARACTERS) {
                 if (c == number) {
                     numbers++;
+                    break;
                 }
             }
             for (char spchar : SPECIAL_CHARACTERS) {
                 if (c == spchar) {
                     spchars++;
+                    break;
                 }
             }
         }
@@ -55,7 +59,6 @@ public class Password {
     }
 
     public String generatePassword() {
-        String generatePassword[] = new String[length];
         password = "";
         for (int i = 0; i < length; i++) {
             int charAlphaPicker = (int) ((Math.random() * 4) + 1);
@@ -63,24 +66,21 @@ public class Password {
             switch (charAlphaPicker) {
                 case 1:
                     charBetaPicker = (int) (Math.random() * 26);
-                    generatePassword[i] = String.valueOf(ALPHA_UPPER_CHARACTERS[charBetaPicker]);
+                    password += String.valueOf(ALPHA_UPPER_CHARACTERS[charBetaPicker]);
                     break;
                 case 2:
                     charBetaPicker = (int) (Math.random() * 26);
-                    generatePassword[i] = String.valueOf(ALPHA_LOWER_CHARACTERS[charBetaPicker]);
+                    password += String.valueOf(ALPHA_LOWER_CHARACTERS[charBetaPicker]);
                     break;
                 case 3:
                     charBetaPicker = (int) (Math.random() * 10);
-                    generatePassword[i] = String.valueOf(NUMERIC_CHARACTERS[charBetaPicker]);
+                    password += String.valueOf(NUMERIC_CHARACTERS[charBetaPicker]);
                     break;
                 case 4:
                     charBetaPicker = (int) (Math.random() * 32);
-                    generatePassword[i] = String.valueOf(SPECIAL_CHARACTERS[charBetaPicker]);
+                    password += String.valueOf(SPECIAL_CHARACTERS[charBetaPicker]);
                     break;
             }
-        }
-        for (int i = 0; i < length; i++) {
-            password += String.valueOf(generatePassword[i]);
         }
         return password;
     }
