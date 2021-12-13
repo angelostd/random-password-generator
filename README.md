@@ -8,7 +8,7 @@
 ## General info 
 There are two java classes. 'Password.java' is focused on the logical process, and 'Password_Generator.java' is made for executing and testing the logical java class.
 
-(This is my first project using java)
+>(This is my first project using java)
 
 ## Technologies
 This project is created with:
