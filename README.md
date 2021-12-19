@@ -21,5 +21,6 @@ When you execute the code, the console will request how many passwords, and the 
 ![console-input](https://i.imgur.com/QgwnYxD.png) 
 ### Outputs
 This is the result
+>("Is it Strong?" is referring to an array of booleans (forcibly created to complete all statements of my class, I think it is not necessary because you can call the method instead) that if the password has at least 1 uppercase, 1 lowercase, 1 number, 1 special character and is longer than 8 characters. It returns true, like "yeah, this pw is secure, don't worry")
 
 ![console-output](https://i.imgur.com/WHclUL2.png)
